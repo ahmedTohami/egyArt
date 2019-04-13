@@ -1,0 +1,136 @@
+body {
+  background-color: #ff3cac;
+  background: linear-gradient(225deg, #ff3cac 0%, #784ba0 50%, #2b86c5 100%);
+}
+
+.logo {
+  background: #262626;
+  text-align: center;
+  padding: 5px;
+}
+
+.logo a {
+  font-family: "Lato", sans-serif;
+  color: #fff;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  font-size: 24px;
+  text-align: center;
+}
+
+.logo a:hover {
+  color: #e91e63;
+}
+
+.logo a:focus {
+  color: #e91e63;
+}
+
+.logo i {
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  display: none;
+  visibility: hidden;
+  opacity: 0;
+  float: left;
+  color: #fff;
+  -webkit-transform: all 0.3s ease;
+          transform: all 0.3s ease;
+  line-height: 42px;
+  font-size: 24px;
+  margin-left: 5px;
+}
+
+.logo i:hover {
+  color: #e91e63;
+  cursor: pointer;
+}
+
+nav {
+  background: #262626;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 !important;
+  padding: 0 !important;
+  list-style: none !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav ul li {
+  list-style: none !important;
+  font-size: 15px;
+  margin: 10px;
+  padding: 5px;
+}
+
+nav ul li a {
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none !important;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+nav ul li a:hover {
+  color: #e91e63;
+}
+
+nav ul li a:focus {
+  color: #e91e63;
+}
+
+@media only screen and (max-width: 500px) {
+  .logo i {
+    display: inline-block;
+    visibility: visible;
+    opacity: 1;
+  }
+  nav {
+    background: url(../img/bgnav.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 80%;
+    height: 100%;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    position: absolute;
+    -webkit-transform: translate(-100%, 0);
+            transform: translate(-100%, 0);
+    margin: 0;
+    z-index: 9999;
+    -webkit-box-shadow: 2px 7px 5px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 2px 7px 5px 4px rgba(0, 0, 0, 0.24);
+  }
+  nav ul {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    left: 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  nav ul li {
+    width: 100%;
+    display: block;
+    text-align: center;
+  }
+  nav.toggle {
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+/*# sourceMappingURL=navbar.css.map */

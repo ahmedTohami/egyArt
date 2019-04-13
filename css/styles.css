@@ -1,0 +1,13 @@
+.owl-carousel .owl-stage-outer {
+  width: 100%;
+}
+
+.bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.owl-theme .owl-dots .owl-dot.active span {
+  background: #e91e63;
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,291 @@
+ 
+$ease: all 0.3s ease;
+$navBackColor: #262626;
+$logoBackColor: #262626;
+$bodyBackColor: #607d8b;
+$secColor: #e91e63;
+
+ 
+
+.work {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.artist-works {
+  ul {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #ccc;
+    margin: 0;
+    padding: 0;
+  }
+
+  ul li {
+    list-style: none;
+    position: relative;
+    width: 20%;
+    height: 100%;
+    border-right: 1px solid #000;
+    float: left;
+    box-sizing: border-box;
+    transition: 0.5s;
+    text-align: center;
+    overflow: hidden;
+  }
+
+  ul li:nth-child(1) {
+    background-size: cover;
+  }
+
+  ul li:nth-child(2) {
+    background-size: cover;
+  }
+
+  ul li:nth-child(3) {
+    background-size: cover;
+  }
+
+  ul li:nth-child(4) {
+    background-size: cover;
+  }
+
+  ul li:nth-child(5) {
+    background-size: cover;
+  }
+
+  ul:hover li {
+    width: 10%;
+  }
+  ul li:hover {
+    width: 60%;
+  }
+
+  ul li .content {
+    position: absolute;
+    bottom: -100%;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
+    color: #fff;
+  }
+
+  ul li:hover .content {
+    bottom: 0;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    opacity: 1;
+  }
+}
+
+.artist-works-mobiels {
+  position: relative;
+  display: none;
+  visibility: hidden;
+
+  .artistic-item {
+    position: relative;
+    height: 300px;
+    transition: all 0.3s ease;
+    filter: grayscale(100%);
+
+    .image-wrapper {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      .bg {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        img {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    .info {
+      position: absolute;
+      width: 60%;
+      height: 60%;
+      top: 50%;
+      left: 50%;
+      overflow: hidden;
+      transform: translate(-50%, -50%);
+
+      .left,
+      .top,
+      .bottom,
+      .right {
+        transition: all 0.7s ease;
+        background: $secColor;
+        position: absolute;
+        transform-origin: center;
+        transform: scale3d(0, 0, 0);
+      }
+
+      .left {
+        height: 100%;
+        width: 5px;
+        left: 0;
+        transform-origin: top;
+      }
+      .right {
+        height: 100%;
+        width: 5px;
+        right: 0;
+        transform-origin: bottom;
+      }
+      .top {
+        width: 100%;
+        height: 5px;
+        top: 0;
+        transform-origin: left;
+      }
+      .bottom {
+        width: 100%;
+        height: 5px;
+        bottom: 0;
+        transform-origin: right;
+      }
+
+      .data {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transition: all 0.2s ease;
+
+        ul {
+          position: absolute;
+          list-style: none;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-wrap: wrap;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          margin: 0;
+
+          li {
+            list-style: none;
+            max-width: 100%;
+            width: 100%;
+            transition: all 0.3s ease;
+            margin-left: 20px;
+            font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+            font-weight: 900;
+            color: #fff;
+          }
+          li:nth-child(odd) {
+            transform: translateX(-200px);
+          }
+          li:nth-child(even) {
+            transform: translateX(1000px);
+          }
+        }
+      }
+    }
+
+    &:hover {
+      -webkit-box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+      -moz-box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+      box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+      filter: grayscale(0%);
+
+      .top,
+      .bottom,
+      .left,
+      .right {
+        transform: scale3d(1, 1, 1);
+      }
+
+      .data {
+        ul {
+          background: #7878de87;
+          li:nth-child(1) {
+            transition-delay: 0.3s;
+            transform: translateX(0);
+          }
+          li:nth-child(2) {
+            transition-delay: 0.6s;
+            transform: translateX(0);
+          }
+          li:nth-child(3) {
+            transition-delay: 0.9s;
+            transform: translateX(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .artist-works {
+    display: none;
+    visibility: hidden;
+  }
+  .artist-works-mobiels {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.artist-image-wrapper {
+  position: relative;
+  height: 400px;
+  width: 60%;
+
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #000;
+  overflow: hidden;
+
+  border-radius: 30px;
+  -webkit-box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+   
+    .text {
+      height: 400px;
+      font: bolder 5px "Alfa Slab One";
+      text-align: center;
+      margin: 0;
+      background: url("../img/clay.png") no-repeat center center;
+      background-size: contain;
+      margin: auto;
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      overflow: hidden;
+  }
+}
+
+.about-artist{
+  border-radius: 30px;
+  -webkit-box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+  -moz-box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+  box-shadow: 10px 9px 16px 0px rgba(0, 0, 0, 0.32);
+  border-radius: 30px;
+}
